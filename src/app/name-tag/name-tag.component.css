@@ -1,0 +1,11 @@
+
+.spanContainer{
+    height:auto;
+    width:168px;
+    color:#fff;
+    display: inline-block;
+    background-color: green;
+    margin-right: 10px;
+    word-wrap: break-word;
+    font-size: 13px;
+}

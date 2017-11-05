@@ -1,0 +1,15 @@
+.inner-comp{
+    height:auto;
+    width:auto;
+    background: red;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    color:#fff;
+}
+.btn{
+    height: auto;
+    width:auto;
+    color: #fff;
+    background: #000;
+}

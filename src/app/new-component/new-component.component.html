@@ -1,0 +1,5 @@
+<div class="new-comp">
+    <div>Outer:{{namesList}}</div>
+    <div>Selected: {{nameValue}}</div>
+    <app-inner *ngFor="let name of namesList" [name] = "name" (eventFromInner)="eventFromInner($event)"></app-inner>
+</div>

@@ -1,6 +1,13 @@
 <h1>
   {{title}}
 </h1>
+<h2>Component Creation</h2>
+<div class="main-Container">
+  <div>Main Container</div>
+  <div>Data: {{namesList}}</div>
+  <app-new-component [namesList]="namesList"></app-new-component>
+  <app-name-container></app-name-container>
+</div>
 <h2>Create Data For data:</h2>
 <div>
     <form class="form-horizontal">

@@ -14,6 +14,7 @@ export class AppComponent {
     {name:"Pete", position:"COO"},
     {name:"Pallavi", position:"Developer"}
   ];
+  namesList = ['Mark', 'Pete', 'Pallavi'];
   addEmployee(){
       this.employees.push(this.model);
   }
