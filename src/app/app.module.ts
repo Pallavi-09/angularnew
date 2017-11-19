@@ -8,6 +8,7 @@ import { NameContainerComponent } from './name-container/name-container.componen
 import { NameTagComponent } from './name-tag/name-tag.component';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { InnerComponent } from './inner/inner.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { InnerComponent } from './inner/inner.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule
   ],

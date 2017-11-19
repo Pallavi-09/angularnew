@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'ng-app',
@@ -21,4 +22,6 @@ export class AppComponent {
   deleteEmp(i){
       console.log(i);
   }
+
+  constructor (private httpClient:HttpClient){}
 }
