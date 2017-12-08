@@ -4,3 +4,16 @@
   height:auto;
   border:1px solid #8880CD;  
 }
+.pipes{
+  height:auto;
+  width:100%;
+  border: 1ps solid #000;
+  background: #eee;
+  margin-bottom: 10px;
+}
+.ngonchg{
+  height:200px;
+  width:100%;
+  background-color: yellow;
+  border:1px solid #000;
+}

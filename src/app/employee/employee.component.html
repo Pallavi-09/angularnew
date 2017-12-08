@@ -1,0 +1,39 @@
+<div class="empdetail">
+  <app-showgender [all] = "employeeCount()" [male] = "maleemployeeCount()" [female] = "femaleemployeeCount()"></app-showgender>
+  <br/><br/>
+  <div>
+    <table>
+        <thead>
+            <th>
+              Code
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Gender
+            </th>
+            <th>
+              Annual Salary
+            </th>
+            <th>
+              DOB
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let emp of employee'>
+              <td>{{emp.code}}</td>
+      
+              <td>{{emp.name}}</td>
+      
+              <td>{{emp.gender}}</td>
+      
+              <td>{{emp.annualSalry}}</td>
+      
+              <td>{{emp.dateOfBirth}}</td>
+      
+            </tr>
+        </tbody>
+      </table>
+  </div>  
+</div>

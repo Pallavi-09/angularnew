@@ -8,7 +8,30 @@ import { NameContainerComponent } from './name-container/name-container.componen
 import { NameTagComponent } from './name-tag/name-tag.component';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { InnerComponent } from './inner/inner.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import {RouterModule, Routes } from '@angular/router';
+import { OneComponent } from './components/one/one.component';
+import { TwoComponent } from './components/two/two.component';
+import { UserService } from './service/user.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { ShowgenderComponent } from './showgender/showgender.component';
+
+
+const appRoutes: Routes = [
+  { path : 'home', component: HomeComponent},
+  { path : 'about', component: AboutComponent},
+  { path : 'user', children : [
+    { path : 'list', component: UserlistComponent, children : [
+      { path : 'detail/:name', component : UserComponent}
+    ]}
+  ]},
+  { path : '', redirectTo: '/home', pathMatch: 'full'},
+  { path : '**', redirectTo: '/home', pathMatch: 'full'}
+]
 
 @NgModule({
   declarations: [
@@ -16,15 +39,24 @@ import { HttpClientModule} from '@angular/common/http'
     NameContainerComponent,
     NameTagComponent,
     NewComponentComponent,
-    InnerComponent
+    InnerComponent,
+    AboutComponent,
+    HomeComponent,
+    UserComponent,
+    UserlistComponent,
+    OneComponent,
+    TwoComponent,
+    EmployeeComponent,
+    ShowgenderComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

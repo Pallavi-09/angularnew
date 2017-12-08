@@ -1,14 +1,71 @@
-<h1>
-  {{title}}
-</h1>
-<h2>Component Creation</h2>
+<h3>
+  {{title | uppercase}}
+</h3>
+<app-employee></app-employee>
+<br/>
+<br/>
+<br/>
+
+<div class="pipes">
+  <h4>Date Pipe</h4>
+  <div> {{birthday | date:'short'}} </div>
+
+  <h4>Number Pipe</h4>
+  <div> {{14.5654 | number:'1.0-3'}} </div>
+  
+  <h4>Currency Pipe</h4>
+  <div> {{ 15.99 | currency:'INR':true:'1.1-1'}} </div>
+
+  <h4>Async Data</h4>
+  <div> {{ promisData }} </div>
+
+  <div>My birthday is on {{myBirth | date:format}}</div>
+  <label><button (click)="toggleFunc()">Toggle Formate</button></label>
+</div>
+<div class="ngonchg">
+    <label>Input Text:</label>
+    <input type="text" />
+    <br/>
+    <div>Type String: {{inputString}}</div>
+</div>
+<app-one></app-one>
+<app-two></app-two>
+<ul>
+  <li>
+    <a routerLink="/home">Home</a>
+  </li>
+  <li>
+    <a routerLink="/about">About</a>
+  </li>
+  <li>
+    <a routerLink="/user/list">User</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h4>HTTP GET&POST Method</h4>
+
+<input type="text" (keyup)="getName($event)">
+<button (click)="getProfile()">Get Profile</button>
+<br/>
+<div *ngIf='found'>{{this.name}}'s age is {{this.age}}</div>
+
+<br/>
+<button (click)="postProfile()">Post Profile</button>
+<div *ngIf='postfond'>{{this.postname}} and {{this.postage}} is updated into the profiles json.</div>
+
+<h4>Component Creation</h4>
 <div class="main-Container">
   <div>Main Container</div>
   <div>Data: {{namesList}}</div>
   <app-new-component [namesList]="namesList"></app-new-component>
   <app-name-container></app-name-container>
 </div>
-<h2>Create Data For data:</h2>
+<h4>Create Data For data:</h4>
 <div>
     <form class="form-horizontal">
         <div class="form-group">
@@ -30,7 +87,7 @@
         </div>
       </form>
 </div>
-<h2>Read data & (Delete data)</h2>
+<h4>Read data & (Delete data)</h4>
 <div>
   <table class="table table-bordered">
       <thead>
@@ -51,4 +108,4 @@
         </tr>
       </tbody>
     </table>    
-</div>
+
