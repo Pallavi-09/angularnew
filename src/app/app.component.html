@@ -1,4 +1,30 @@
-<h3>
+<div class="pull-left">
+  <table class="table" style="width: 60%;">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Count</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = 'let list of details'>
+            <td>{{list.id}}</td>
+    
+            <td>{{list.Name}}</td>
+    
+            <td>{{list.Count}}</td>
+    
+          </tr>
+      </tbody>
+    </table>
+</div>
+<div class="pull-left">
+  <app-about></app-about>
+</div> 
+
+
+<!-- <h3>
   {{title | uppercase}}
 </h3>
 <app-employee></app-employee>
@@ -108,4 +134,4 @@
         </tr>
       </tbody>
     </table>    
-
+ -->
