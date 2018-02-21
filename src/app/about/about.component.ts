@@ -4,29 +4,11 @@ import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-about',
-  templateUrl: `<h3>{{mainStr}}</h3><button (click)="sendMsg()">Click Me</button>`
+  templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
 
+  ary = [1,2,3,4,5,6,7,8,9,10];
 
-  @Input('passStr') mainStr:string;
-
-  @Output()
-  outputVal: EventEmitter<string> = new EventEmitter<string>();
-  textMsg = "passed by child";
-  
-
-
-
-  constructor() { }
-
-  ngOnInit() {
-    
-    
-    
-  }
-  sendMsg(){
-    this.outputVal.emit(this.textMsg);
-  }
-
+  ngOnInit(){}
 }
